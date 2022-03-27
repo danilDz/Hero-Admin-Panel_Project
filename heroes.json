@@ -1,29 +1,29 @@
 {
-    "heroes": [
-        {
-            "id": 1,
-            "name": "Первый герой",
-            "description": "Первый герой в рейтинге!",
-            "element": "fire"
-        },
-        {
-            "id": 2,
-            "name": "Неизвестный герой",
-            "description": "Скрывающийся в тени",
-            "element": "wind"
-        },
-        {
-            "id": 3,
-            "name": "Морской герой",
-            "description": "Как аквамен, но не из DC",
-            "element": "water"
-        }
-    ],
-    "filters": [
-        "all",
-        "fire",
-        "water",
-        "wind",
-        "earth"
-    ]
+  "heroes": [
+    {
+      "id": "567d5137-4a2b-4a80-8b3e-bd2799a2ae52",
+      "name": "Natus Vincere",
+      "description": "qweqwdqdqwdqw",
+      "element": "earth"
+    },
+    {
+      "id": "c190e64a-18db-4d81-a34b-26affced3384",
+      "name": "qwdqwd",
+      "description": "csdcsdcsdcsdcsdc",
+      "element": "fire"
+    },
+    {
+      "id": "6ac26b3b-367d-47b1-9308-4f308cae99bc",
+      "name": "danil_dz_k",
+      "description": "vdfvdfbfgbfgb",
+      "element": "water"
+    }
+  ],
+  "filters": [
+    "all",
+    "fire",
+    "water",
+    "wind",
+    "earth"
+  ]
 }
