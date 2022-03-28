@@ -1,16 +1,9 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { filtersFetched, filtersFetching, filtersFetchingError, filtersChange, filtersApply } from "../../actions";
+import { filtersChange, fetchFilters } from "../../actions";
 import { useHttp } from "../../hooks/http.hook";
 
 import '../../styles/index.scss';
-
-// Задача для этого компонента:
-// Фильтры должны формироваться на основании загруженных данных
-// Фильтры должны отображать только нужных героев при выборе
-// Активный фильтр имеет класс active
-// Изменять json-файл для удобства МОЖНО!
-// Представьте, что вы попросили бэкенд-разработчика об этом
 
 const HeroesFilters = () => {
 
@@ -20,10 +13,8 @@ const HeroesFilters = () => {
     const [activeFilter, setActiveFilter] = useState('all')
 
     useEffect(() => {
-        dispatch(filtersFetching())
-        request('http://localhost:3001/filters')
-        .then(res => dispatch(filtersFetched(res)))
-        .catch(() => dispatch(filtersFetchingError()))
+        dispatch(fetchFilters(request))
+        // eslint-disable-next-line
     }, [])
 
     if (filtersLoadingStatus === 'loading') {
