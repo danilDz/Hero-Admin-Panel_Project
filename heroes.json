@@ -1,22 +1,22 @@
 {
   "heroes": [
     {
-      "id": "567d5137-4a2b-4a80-8b3e-bd2799a2ae52",
-      "name": "Natus Vincere",
-      "description": "qweqwdqdqwdqw",
-      "element": "earth"
+      "id": "a9c54b1e-aee4-45e7-be9d-8813d5b3a4cb",
+      "name": "wefwefwefw",
+      "description": "efwefwefwefewfwef",
+      "element": "wind"
     },
     {
-      "id": "c190e64a-18db-4d81-a34b-26affced3384",
-      "name": "qwdqwd",
-      "description": "csdcsdcsdcsdcsdc",
+      "id": "0cfb2b5b-d411-4c6c-a491-1cb7350b415f",
+      "name": "qwdqwdqwd",
+      "description": "qwdqwdqwdqwd",
       "element": "fire"
     },
     {
-      "id": "6ac26b3b-367d-47b1-9308-4f308cae99bc",
-      "name": "danil_dz_k",
-      "description": "vdfvdfbfgbfgb",
-      "element": "water"
+      "id": "b8967063-98db-44ec-b41d-fbd300a93ea6",
+      "name": "qwdqwd",
+      "description": "egergergerge",
+      "element": "fire"
     }
   ],
   "filters": [

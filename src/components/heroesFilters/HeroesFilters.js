@@ -14,7 +14,7 @@ import '../../styles/index.scss';
 
 const HeroesFilters = () => {
 
-    const {filters, filtersLoadingStatus} = useSelector(state => state)
+    const {filters, filtersLoadingStatus} = useSelector(state => state.filters)
     const dispatch = useDispatch()
     const {request} = useHttp()
     const [activeFilter, setActiveFilter] = useState('all')

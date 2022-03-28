@@ -1,5 +1,5 @@
 import {useHttp} from '../../hooks/http.hook';
-import { useEffect } from 'react';
+import { useEffect, useMemo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -15,7 +15,8 @@ import './heroesList.scss';
 
 const HeroesList = () => {
 
-    const {heroes, heroesLoadingStatus, activeFilter} = useSelector(state => state);
+    const {activeFilter} = useSelector(state => state.filters)
+    const {heroes, heroesLoadingStatus} = useSelector(state => state.heroes);
     const dispatch = useDispatch();
     const {request} = useHttp();
 
@@ -61,10 +62,10 @@ const HeroesList = () => {
                 }
             })
         }
-        
     }
 
     const elements = renderHeroesList(heroes);
+
     return (
         <TransitionGroup component="ul">
             {elements}
