@@ -31,11 +31,13 @@ export const heroesFetching = createAction('HEROES_FETCHING')
 
 export const heroesFetched = createAction('HEROES_FETCHED')
 
-export const heroesFetchingError = () => {
-    return {
-        type: 'HEROES_FETCHING_ERROR'
-    }
-}
+// export const heroesFetchingError = () => {
+//     return {
+//         type: 'HEROES_FETCHING_ERROR'
+//     }
+// }
+
+export const heroesFetchingError = createAction('HEROES_FETCHING_ERROR')
 
 export const filtersFetching = () => {
     return {
@@ -63,23 +65,29 @@ export const filtersChange = (filter) => {
     }
 }
 
-export const filtersApply = (heroes) => {
-    return {
-        type: 'FILTERS_APPLY',
-        payload: heroes
-    }
-}
+// export const filtersApply = (heroes) => {
+//     return {
+//         type: 'FILTERS_APPLY',
+//         payload: heroes
+//     }
+// }
 
-export const heroesDelete = (heroes) => {
-    return {
-        type: 'HEROES_DELETE',
-        payload: heroes
-    }
-}
+export const filtersApply = createAction('FILTERS_APPLY')
 
-export const heroesAdd = (heroes) => {
-    return {
-        type: 'HEROES_ADD',
-        payload: heroes
-    }
-}
+// export const heroesDelete = (heroes) => {
+//     return {
+//         type: 'HEROES_DELETE',
+//         payload: heroes
+//     }
+// }
+
+export const heroesDelete = createAction('HEROES_DELETE')
+
+// export const heroesAdd = (heroes) => {
+//     return {
+//         type: 'HEROES_ADD',
+//         payload: heroes
+//     }
+// }
+
+export const heroesAdd = createAction('HEROES_ADD')
