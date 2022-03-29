@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useHttp } from '../../hooks/http.hook';
 import { useDispatch, useSelector } from 'react-redux';
-import { heroesAdd } from '../../actions';
+import { heroesAdd } from '../heroesList/heroesSlice';
 
 import './heroesAddForm.scss'
 

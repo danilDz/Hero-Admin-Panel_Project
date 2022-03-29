@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { filtersChange, fetchFilters } from "../../actions";
+import { fetchFilters } from "../../actions";
+import { filtersChange } from "./filtersSlice";
 import { useHttp } from "../../hooks/http.hook";
 
 import '../../styles/index.scss';
