@@ -3,14 +3,7 @@ import {useHttp} from '../../hooks/http.hook';
 
 const heroesAdapter = createEntityAdapter()
 
-// const initialState = {
-//     heroes: [],
-//     heroesLoadingStatus: 'idle',
-//     filteredHeroes: []
-// }
-
 const initialState = heroesAdapter.getInitialState({
-    heroes: [],
     heroesLoadingStatus: 'idle',
     filteredHeroes: []
 })
@@ -31,10 +24,12 @@ const heroesSlice = createSlice({
             state.filteredHeroes = action.payload
         },
         heroesAdd: (state, action) => {
-            state.heroes = action.payload
+            heroesAdapter.setAll(state, action.payload)
+
         },
         heroesDelete : (state, action) => {
-            state.heroes = action.payload
+            heroesAdapter.setAll(state, action.payload)
+
         }
     },
     extraReducers: (builder) => {
@@ -44,7 +39,7 @@ const heroesSlice = createSlice({
         })
         .addCase(fetchHeroes.fulfilled, (state, action) => {
             state.heroesLoadingStatus = 'idle'
-            state.heroes = action.payload
+            heroesAdapter.setAll(state, action.payload)
         })
         .addCase(fetchHeroes.rejected, state => {
             state.heroesLoadingStatus = 'error'
@@ -54,6 +49,8 @@ const heroesSlice = createSlice({
 })
 
 const {actions, reducer} = heroesSlice
+
+export const {selectAll} = heroesAdapter.getSelectors(state => state.heroes)
 
 export default reducer
 export const {

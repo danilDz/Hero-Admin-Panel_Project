@@ -3,13 +3,14 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useHttp } from '../../hooks/http.hook';
 import { useDispatch, useSelector } from 'react-redux';
-import { heroesAdd } from '../heroesList/heroesSlice';
+import { heroesAdd, selectAll } from '../heroesList/heroesSlice';
+import store from '../../store';
 
 import './heroesAddForm.scss'
 
 const HeroesAddForm = () => {
 
-    const {heroes} = useSelector(state => state.heroes)
+    const heroes = selectAll(store.getState())
     const {filters, filtersLoadingStatus} = useSelector(state => state.filters)
     const dispatch = useDispatch()
 

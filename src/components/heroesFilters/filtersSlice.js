@@ -49,6 +49,8 @@ const filtersSlice = createSlice({
 
 const {actions, reducer} = filtersSlice
 
+export const {selectAll} = filtersAdapter.getSelectors(state => state.filters)
+
 export default reducer
 export const {
     filtersFetching,
